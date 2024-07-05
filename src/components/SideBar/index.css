@@ -1,0 +1,92 @@
+.bg-container {
+}
+.main-container {
+  height: 150vh;
+  width: 35vh;
+  margin-right: 0px;
+  padding-right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bg-containerDark {
+  background-color: #181818;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.banner-main-container {
+  background-color: white;
+}
+.active-dark-banner-main-container {
+  background-color: #212121;
+  width: 35vh;
+}
+.side-container {
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+}
+.button {
+  border-width: 0px;
+  display: flex;
+  background-color: white;
+  width: 207px;
+  padding-left: 10px;
+}
+.menu-icon {
+  font-size: 30px;
+  margin-right: 20px;
+  align-self: center;
+}
+.activeIcon {
+  color: red;
+}
+.inactiveIcon {
+  color: #909090;
+}
+.activePara {
+  font-weight: 600;
+}
+.activeButton {
+  background-color: #e2e8f0;
+}
+.activeDarkButton {
+  background-color: #313131;
+}
+.inactiveDarkButton {
+  background-color: #212121;
+}
+.activeDarkPara {
+  color: white;
+  font-weight: 600;
+}
+.inactiveDarkPara {
+  color: white;
+}
+.info-icons-container {
+  display: flex;
+}
+.info-icons {
+  height: 30px;
+  margin-right: 20px;
+}
+.contact-us-text {
+  font-weight: 600;
+  font-size: 25px;
+}
+.image {
+  height: 100px;
+}
+.activecontact-us-text {
+  font-weight: 600;
+  color: white;
+  font-size: 25px;
+}
+.active-text {
+  color: white;
+}
+.down-text-container {
+  padding-left: 10px;
+}
