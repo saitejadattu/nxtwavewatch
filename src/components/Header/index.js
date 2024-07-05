@@ -45,9 +45,9 @@ const Header = props => (
       return (
         <HeaderDiv bgColor={isDark ? '#212121' : 'white'}>
           <Ul>
-            <Link to="/">
+            <Link to='/'>
               <li>
-                <NxtImg src={imgUrl} alt="website logo" />
+                <NxtImg src={imgUrl} alt='website logo' />
               </li>
             </Link>
             <LogDiv>
@@ -56,27 +56,27 @@ const Header = props => (
                   <Btn
                     color={isDark ? 'white' : ''}
                     onClick={onClickIcon}
-                    data-testid="theme"
+                    data-testid='theme'
                   >
                     <FiSun />
                   </Btn>
                 ) : (
-                  <Btn onClick={onClickIcon} data-testid="theme">
+                  <Btn onClick={onClickIcon} data-testid='theme'>
                     <FaMoon />
                   </Btn>
                 )}
               </Div>
               <MobDiv>
                 <ProfileICon
-                  src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"
-                  alt="profile"
+                  src='https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png'
+                  alt='profile'
                 />
               </MobDiv>
               <Popup
                 modal
                 trigger={
                   <DesButton
-                    fs="90"
+                    fs='90'
                     color={isDark ? 'white' : 'black'}
                     onClick={onClickMenu}
                   >
@@ -87,9 +87,9 @@ const Header = props => (
                 {close => (
                   <Div>
                     <Button
-                      type="button"
-                      className="trigger-button"
-                      data-testid="close"
+                      type='button'
+                      className='trigger-button'
+                      data-testid='close'
                       onClick={() => close()}
                     >
                       <IoMdClose />
@@ -104,8 +104,8 @@ const Header = props => (
                   trigger={
                     <MobButton
                       bc={isDark ? 'white' : '#4f46e5'}
-                      bs="solid"
-                      p="10"
+                      bs='solid'
+                      p='10'
                       bgColor={isDark ? '#0f0f0f' : 'white'}
                       color={isDark ? 'white' : '#4f46e5'}
                       onClick={onClickIconLogOut}
@@ -115,15 +115,15 @@ const Header = props => (
                   }
                 >
                   {close => (
-                    <Div p="50" bgColor={isDark ? '#313131' : 'white'}>
-                      <Para fw="400" color={isDark ? 'white' : '#4f46e5'}>
+                    <Div p='50' bgColor={isDark ? '#313131' : 'white'}>
+                      <Para fw='400' color={isDark ? 'white' : '#4f46e5'}>
                         Are you sure, you want to logout?
                       </Para>
-                      <Div display="flex" jc="center" ai="center">
+                      <Div display='flex' jc='center' ai='center'>
                         <BUtton
                           bc={isDark ? '#d7dfe9' : '#d7dfe9'}
-                          bw="1"
-                          bgColor="transparent"
+                          bw='1'
+                          bgColor='transparent'
                           onClick={() => close()}
                         >
                           Cancel
@@ -148,15 +148,15 @@ const Header = props => (
                   }
                 >
                   {close => (
-                    <Div p="50" bgColor={isDark ? '#313131' : 'white'}>
-                      <Para fw="400" color={isDark ? 'white' : '#4f46e5'}>
+                    <Div p='50' bgColor={isDark ? '#313131' : 'white'}>
+                      <Para fw='400' color={isDark ? 'white' : '#4f46e5'}>
                         Are you sure, you want to logout?
                       </Para>
-                      <Div display="flex" jc="center" ai="center">
+                      <Div display='flex' jc='center' ai='center'>
                         <BUtton
                           bc={isDark ? '#d7dfe9' : '#d7dfe9'}
-                          bw="1"
-                          bgColor="transparent"
+                          bw='1'
+                          bgColor='transparent'
                           onClick={() => close()}
                         >
                           Cancel

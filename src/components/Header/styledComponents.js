@@ -133,6 +133,7 @@ export const Ul = styled.ul`
   display: flex;
   justify-content: space-between;
   padding: 5px;
+  color: ${props => (props.color ? props.color : null)};
   align-self: center;
   margin-top: 0px;
 `
