@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-
+import {FiSun} from 'react-icons/fi'
+import {FaMoon} from 'react-icons/fa'
 export const HeaderDiv = styled.nav`
   height: 10vh;
   padding: 5px;
@@ -25,8 +26,9 @@ export const Button = styled.button`
   padding: 10px;
   border-width: 1px;
   border-radius: 5px;
-  border-color: ${props => (props.color ? props.color : null)};
+  border-color: ${props => (props.bc ? props.bc : null)};
   background-color: ${props => (props.bgColor ? props.bgColor : null)};
+  border-width: ${props => (props.bw ? props.bw : null)};
   color: ${props => (props.color ? props.color : null)};
   border-style: solid;
   font-weight: 600;
@@ -136,4 +138,16 @@ export const Ul = styled.ul`
   color: ${props => (props.color ? props.color : null)};
   align-self: center;
   margin-top: 0px;
+`
+export const FiSunIcon = styled(FiSun)`
+  font-size:30px;
+  color:${props => (props.color ? props.color : null)};
+`
+export const FaMoonIcon = styled(FaMoon)`
+  font-size:30px;
+  color:${props => (props.color ? props.color : null)};
+`
+export const Image = styled.img`
+  height:30px;
+  align-slef:center;
 `
