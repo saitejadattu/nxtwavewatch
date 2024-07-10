@@ -53,7 +53,7 @@ class Gaming extends Component {
         gamingData: updatedGaming,
         apiStatus: apiStatusComponents.success,
       })
-    } else if (response.status === 400) {
+    } else {
       this.setState({apiStatus: apiStatusComponents.failure})
     }
   }
@@ -65,7 +65,7 @@ class Gaming extends Component {
         {value => {
           const {isDark} = value
           return (
-            <Div bgColor={isDark ? '#0f0f0f ' : '#f9f9f9'}>
+            <Div data-testid="gaming" bgColor={isDark ? '#0f0f0f ' : '#f9f9f9'}>
               <IconDiv
                 display="flex"
                 bgColor={isDark ? '#181818' : ' #f1f1f1'}

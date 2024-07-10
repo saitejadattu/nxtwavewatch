@@ -46,6 +46,13 @@ export const Div = styled.div`
     margin-left:${props => (props.ml ? props.ml : '')}px;
     padding-left:${props => (props.pl ? props.pl : '')}px;
 `
+export const DivPop = styled.div`
+  padding:30px;
+  background-color:${props => (props.bgColor ? props.bgColor : '')};
+`
+export const PopupDiv= styled.div`
+  
+`
 export const Btn = styled.button`
   border-width: 0px;
   background-color: transparent;

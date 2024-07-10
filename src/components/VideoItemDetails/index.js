@@ -78,7 +78,7 @@ class VideoItemDetails extends Component {
         videoData: updatedVideoDetails,
         apiStatus: apiStatusComponents.success,
       })
-    } else if (response.status === 400) {
+    } else {
       this.setState({apiStatus: apiStatusComponents.failure})
     }
   }
@@ -136,7 +136,10 @@ class VideoItemDetails extends Component {
           }
           const savedtext = issaved ? 'Saved' : 'Save'
           return (
-            <VideoDiv>
+            <VideoDiv
+             
+              bgColor={isDark ? '#0f0f0f' : '#f9f9f9'}
+            >
               <ReactPlayer url={videoUrl} width={1040} height={500} />
               <Titel color={isDark ? 'white' : '#1e293b'}>{title}</Titel>
               <ViewsDiv>

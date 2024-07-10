@@ -13,8 +13,8 @@ const SavedVideoItem = props => {
       {value => {
         const {isDark} = value
         return (
-          <LI>
-            <Link to={`/videos/${id}`}>
+          <Link to={`/videos/${id}`}>
+            <LI>
               <Div display="flex">
                 <Image
                   height="300px"
@@ -32,8 +32,8 @@ const SavedVideoItem = props => {
                   </Para>
                 </Div>
               </Div>
-            </Link>
-          </LI>
+            </LI>
+          </Link>
         )
       }}
     </AppContext.Consumer>

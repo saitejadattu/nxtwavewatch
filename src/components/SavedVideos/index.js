@@ -23,34 +23,33 @@ class SavedVideos extends Component {
         const {isDark, savedVideo} = value
         return (
           <Div>
-            {savedVideo.length > 0 && (
-              <TrendingDiv
-                pl="100"
-                display="flex"
-                fd="column"
-                bgColor={isDark ? '#181818' : ' #f1f1f1'}
-                data-testid="banner"
-              >
-                <Div display="flex" fd="column" jc="center" as="center">
-                  <Div display="flex">
-                    <IconDiv as="center">
-                      <GiFlamerIcon bgColor={isDark ? 'black' : ' #d7dfe9'} />
-                    </IconDiv>
-                    <Div>
-                      <Heading color={isDark ? 'white' : '#1e293b'} pl="20">
-                        Saved Videos
-                      </Heading>
+            {savedVideo.length > 0 ? (
+              <>
+                <TrendingDiv
+                  pl="100"
+                  display="flex"
+                  fd="column"
+                  bgColor={isDark ? '#181818' : ' #f1f1f1'}
+                >
+                  <Div display="flex" fd="column" jc="center" as="center">
+                    <Div display="flex">
+                      <IconDiv as="center">
+                        <GiFlamerIcon bgColor={isDark ? 'black' : ' #d7dfe9'} />
+                      </IconDiv>
+                      <Div>
+                        <Heading color={isDark ? 'white' : '#1e293b'} pl="20">
+                          Saved Videos
+                        </Heading>
+                      </Div>
                     </Div>
                   </Div>
-                </Div>
-              </TrendingDiv>
-            )}
-            {savedVideo.length > 0 ? (
-              <Ul>
-                {savedVideo.map(each => (
-                  <SavedVideoItem key={each.id} each={each} />
-                ))}
-              </Ul>
+                </TrendingDiv>
+                <Ul>
+                  {savedVideo.map(each => (
+                    <SavedVideoItem key={each.id} each={each} />
+                  ))}
+                </Ul>
+              </>
             ) : (
               <Div
                 height="150vh"

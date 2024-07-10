@@ -39,8 +39,8 @@ class VideoItem extends Component {
             inActivateBtn()
           }
           return (
-            <ListItem onClick={onClickVideoItem}>
-              <Link to={`/videos/${id}`}>
+            <Link to={`/videos/${id}`}>
+              <ListItem onClick={onClickVideoItem}>
                 <div>
                   <Thumbnail src={thumbnailUrl} alt="video thumbnail" />
                 </div>
@@ -60,8 +60,8 @@ class VideoItem extends Component {
                     </ViewDateDiv>
                   </DetailsDiv>
                 </VideoDetails>
-              </Link>
-            </ListItem>
+              </ListItem>
+            </Link>
           )
         }}
       </AppContext.Consumer>

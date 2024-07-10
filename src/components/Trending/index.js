@@ -56,7 +56,7 @@ class Trending extends Component {
         trndingData: updatedTrending,
         apiStatus: apiStatusComponents.success,
       })
-    } else if (reposne.status === 400) {
+    } else {
       this.setState({apiStatus: apiStatusComponents.failure})
     }
   }
@@ -73,7 +73,7 @@ class Trending extends Component {
                 pl="100"
                 display="flex"
                 fd="column"
-                bgColor={isDark ? '#181818' : ' #f1f1f1'}
+                bgColor={isDark ? '#0f0f0f' : ' #f1f1f1'}
               >
                 <Div
                   display="flex"
@@ -168,17 +168,3 @@ class Trending extends Component {
   }
 }
 export default Trending
-
-// let updated = trndingData.map(each => ({
-//       description: each.description,
-//       id: each.id,
-//       name: each.name,
-//       profileImageUrl: each.profileImageUrl,
-//       publishedAt: each.publishedAt,
-//       subscriberCount: each.subscriberCount,
-//       thumbnailUrl: each.thumbnailUrl,
-//       title: each.title,
-//       videoUrl: each.videoUrl,
-//       viewCount: each.viewCount,
-//       isSaved: false,
-//     }))

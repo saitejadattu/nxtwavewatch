@@ -51,7 +51,6 @@ class Home extends Component {
     }
     const reponse = await fetch(url, options)
     const data = await reponse.json()
-    console.log()
     if (reponse.ok === true) {
       const updatedVideoData = data.videos.map(each => ({
         id: each.id,
@@ -66,7 +65,7 @@ class Home extends Component {
         videoList: updatedVideoData,
         apiStatus: apiStatusComponents.success,
       })
-    } else if (reponse.status === 400) {
+    } else {
       this.setState({apiStatus: apiStatusComponents.failure})
     }
   }
@@ -82,7 +81,9 @@ class Home extends Component {
   onClicksearch = () => {
     this.getAllVideos()
   }
-
+  retry = () => {
+    this.getAllVideos()
+  }
   successView = () => {
     const {videoList} = this.state
     return (
@@ -128,7 +129,8 @@ class Home extends Component {
                     fw='500'
                     width='100px'
                     color='white'
-                    onClick={this.getAllVideos}
+                    type='button'
+                    onClick={this.retry}
                   >
                     Retry
                   </Button>
@@ -186,7 +188,7 @@ class Home extends Component {
                 <MobDiv>
                   <SideBar />
                 </MobDiv>
-                <div>
+                <div bgColor={isDark ? '#181818' : '#f9f9f9'}>
                   {isBanner && (
                     <Div
                       bi='https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png'

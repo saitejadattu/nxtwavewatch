@@ -1,26 +1,20 @@
 import AppContext from '../../context/AppContext'
 import {
   Ul,
-  DesButton,
-  MobButton,
-  DesDiv,
-  MobDiv,
-  BUtton,
-  Para,
-  Btn,
   Div,
   Button,
-  ProfileICon,
   LogDiv,
   NxtImg,
   HeaderDiv,
   FiSunIcon,
   FaMoonIcon,
+  DivPop,
   Image,
+  PopupDiv,
 } from './styledComponents'
 import Popup from 'reactjs-popup'
 import Cookies from 'js-cookie'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 const Header = props => {
   return (
     <AppContext.Consumer>
@@ -33,22 +27,25 @@ const Header = props => {
           ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
           : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
         const onClickLogOut = () => {
-          const jwtToken = Cookies.get('jwt_token')
           const {history} = props
           history.replace('/login')
           Cookies.remove('jwt_token')
         }
         return (
-          <HeaderDiv bgColor={isDark ? '#212121' : '#ffffff'}>
+          <HeaderDiv bgColor={isDark ? '#212121' : '#f4f4f4'}>
             <Ul>
-              <LogDiv>
-                <NxtImg src={imgUrl} />
-              </LogDiv>
+              <Link to='/'>
+                <LogDiv>
+                  <NxtImg alt='website logo' src={imgUrl} />
+                </LogDiv>
+              </Link>
               <LogDiv>
                 <Button
-                  bw="0px"
-                  bgColor="transparent"
+                  type='button'
+                  bw='0px'
+                  bgColor='transparent'
                   onClick={onClickChangeTheme}
+                  data-testid='theme'
                 >
                   {isDark ? (
                     <FiSunIcon color={isDark ? 'white' : ''} />
@@ -58,8 +55,8 @@ const Header = props => {
                 </Button>
                 <LogDiv>
                   <Image
-                    alt="profile"
-                    src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"
+                    alt='profile'
+                    src='https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png'
                   />
                 </LogDiv>
                 <LogDiv>
@@ -67,22 +64,41 @@ const Header = props => {
                     modal
                     trigger={
                       <Button
+                        type='button'
                         color={isDark ? 'white' : 'blue'}
                         bc={isDark ? 'white' : 'blue'}
-                        bgColor="transparent"
+                        bgColor='transparent'
                       >
                         Logout
                       </Button>
                     }
                   >
                     {close => (
-                      <Div>
-                        <p>Are you sure you want to logout?</p>
-                        <Div>
-                          <button onClick={() => close()}>cancel</button>
-                          <button onClick={onClickLogOut}>confirm</button>
-                        </Div>
-                      </Div>
+                      <PopupDiv
+                        bgColor='transparent'
+                        height='150vh'
+                        display='flex'
+                        fd='column'
+                        jc='center'
+                        ai='center'
+                      >
+                        <DivPop
+                          height='40vh'
+                          bgColor={isDark ? '#212121' : '#ffffff'}
+                        >
+                          <p color={isDark ? 'white' : 'black'}>
+                            Are you sure, you want to logout?
+                          </p>
+                          <Div>
+                            <button type='button' onClick={() => close()}>
+                              Cancel
+                            </button>
+                            <button type='button' onClick={onClickLogOut}>
+                              Confirm
+                            </button>
+                          </Div>
+                        </DivPop>
+                      </PopupDiv>
                     )}
                   </Popup>
                 </LogDiv>
