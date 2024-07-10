@@ -188,7 +188,7 @@ class Home extends Component {
                 <MobDiv>
                   <SideBar />
                 </MobDiv>
-                <div bgColor={isDark ? '#181818' : '#f9f9f9'}>
+                <Div bgColor={isDark ? '#181818' : '#f9f9f9'}>
                   {isBanner && (
                     <Div
                       bi='https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png'
@@ -254,7 +254,7 @@ class Home extends Component {
                     </div>
                     {this.renderAllvideos()}
                   </div>
-                </div>
+                </Div>
               </div>
             </Dov>
           )
